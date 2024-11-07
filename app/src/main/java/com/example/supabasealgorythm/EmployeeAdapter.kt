@@ -24,8 +24,8 @@ class EmployeeAdapter(private var employeeList: List<Employee>) : RecyclerView.A
     override fun onBindViewHolder(holder: EmployeeViewHolder, position: Int) {
         val employee = employeeList[position]
         holder.fullName.text = employee.name
-        holder.position.text = employee.positionId.toString() // Замените на соответствующее название должности
-        holder.workedHours.text = employee.hoursWorked.toString()
+        holder.position.text = employee.position_id.toString() // Замените на соответствующее название должности
+        holder.workedHours.text = employee.work_hours.toString()
     }
 
     override fun getItemCount(): Int = employeeList.size

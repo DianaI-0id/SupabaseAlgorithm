@@ -7,7 +7,11 @@ import kotlinx.serialization.Serializable
 data class Employee(
     val id: Int,
     @SerialName("fullname") val name: String,
-    val genderId: Int,
-    val positionId: Int,
-    @SerialName("hours_worked") val hoursWorked: Int
+    val age: Int,
+    val gender_id: Int,
+    val position_id: Int,
+    val gender: Gender? = null,
+    val position: Position? = null,
+    val work_hours: Int
 )
+
